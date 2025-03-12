@@ -20,30 +20,35 @@ with st.form("my_form"):
         'Pickup longitude',
         placeholder='Pickup longitude',
         format="%0.6f",
-        step=0.000001
+        step=0.000001,
+        value=-73.950655
     )
     pickup_latitude = st.number_input(
         'Pickup latitude',
         placeholder='Pickup latitude',
         format="%0.6f",
-        step=0.000001
+        step=0.000001,
+        value=40.783282
     )
     dropoff_longitude = st.number_input(
         'Dropoff longitude',
         placeholder='Dropoff longitude',
         format="%0.6f",
-        step=0.000001
+        step=0.000001,
+        value=-73.984365
     )
     dropoff_latitude = st.number_input(
         'Dropoff latitude',
         placeholder='Dropoff latitude',
         format="%0.6f",
-        step=0.000001
+        step=0.000001,
+        value=40.769802
     )
     passengers = st.number_input(
         'Number of passengers',
         placeholder='Number of passengers',
-        step=1
+        step=1,
+        value=2
     )
     submitted = st.form_submit_button("Submit")
     if submitted:
