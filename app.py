@@ -8,7 +8,6 @@ import pandas as pd
 '''
 url = 'https://taxifarededev-768760105976.europe-west1.run.app/predict'
 
-'''pickup_datetime=2014-07-06%2019:18:00&pickup_longitude=-73.950655&pickup_latitude=40.783282&dropoff_longitude=-73.984365&dropoff_latitude=40.769802&passenger_count=2'''
 with st.form("my_form"):
 
     pickup_date = st.date_input(
