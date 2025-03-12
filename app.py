@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 import requests
+import pandas as pd
 
 '''
 # TaxiFareModel front
@@ -65,3 +66,11 @@ if submitted:
     f'''
     Predicted price: **${round(response.json()['fare'], 2)}**
     '''
+    df = pd.DataFrame([
+        {"latitude": params["pickup_latitude"], "longitude": params["pickup_longitude"]},
+        {"latitude": params["dropoff_latitude"], "longitude": params["dropoff_longitude"]}
+    ])
+    st.write(df)
+    st.map(df)
+else:
+    st.map()
